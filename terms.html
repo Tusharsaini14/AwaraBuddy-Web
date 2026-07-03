@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms and Conditions — AwaraBuddy</title>
+  <meta
+    name="description"
+    content="AwaraBuddy Terms and Conditions. Rules for using our group ride companion app, website, and brand channels."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --red: #e02020;
+      --red-dark: #c0000f;
+      --red-light: #fff0ef;
+      --ink: #1a1a1a;
+      --ink-soft: #4a4a4a;
+      --muted: #6b7280;
+      --paper: #ffffff;
+      --surface: #f5f5f5;
+      --surface-alt: #f0f0f0;
+      --border: #e5e7eb;
+      --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
+      --radius-btn: 12px;
+      --radius-card: 16px;
+      --maxw: 1100px;
+      --nav-h: 72px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+    /* Nav */
+    .nav {
+      position: sticky; top: 0; z-index: 100; height: var(--nav-h);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
+    .logo { font-size: 22px; font-weight: 800; color: var(--red); letter-spacing: -0.02em; }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 15px; font-weight: 500; color: var(--ink-soft); transition: color 0.15s; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-actions { display: flex; align-items: center; gap: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 12px 24px; border-radius: var(--radius-btn);
+      font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer; border: none;
+      transition: transform 0.12s, box-shadow 0.2s, background 0.15s; white-space: nowrap;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--red); color: #fff; box-shadow: 0 4px 14px rgba(224, 32, 32, 0.35); }
+    .btn-primary:hover { background: var(--red-dark); }
+    .nav-toggle {
+      display: none; flex-direction: column; justify-content: center; gap: 5px;
+      width: 40px; height: 40px; background: none; border: none; cursor: pointer; padding: 8px;
+    }
+    .nav-toggle span { display: block; width: 100%; height: 2px; background: var(--ink); border-radius: 2px; }
+
+    /* Page header */
+    .legal-hero {
+      padding: 48px 0 32px; background: var(--surface); border-bottom: 1px solid var(--border);
+    }
+    .eyebrow {
+      font-size: 12px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--red); margin-bottom: 12px;
+    }
+    .legal-hero h1 { font-size: clamp(32px, 5vw, 44px); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 12px; }
+    .legal-hero .subtitle { font-size: 15px; color: var(--muted); max-width: 60ch; }
+
+    /* Two-column layout */
+    .legal-body { padding: 48px 0 80px; }
+    .legal-grid { display: grid; grid-template-columns: 260px 1fr; gap: 48px; align-items: start; }
+
+    /* Sidebar */
+    .legal-sidebar { position: sticky; top: calc(var(--nav-h) + 24px); }
+    .toc { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .toc a {
+      display: block; padding: 10px 16px; font-size: 14px; font-weight: 500;
+      color: var(--muted); border-radius: 8px; transition: color 0.15s, background 0.15s;
+    }
+    .toc a:hover { color: var(--ink); background: var(--surface); }
+    .toc a.is-active { color: var(--red); background: var(--red-light); font-weight: 600; }
+
+    /* Content sections */
+    .legal-content section { margin-bottom: 48px; scroll-margin-top: calc(var(--nav-h) + 24px); }
+    .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .section-num {
+      flex-shrink: 0; width: 32px; height: 32px; border-radius: 8px;
+      background: var(--red-light); color: var(--red);
+      display: grid; place-items: center; font-size: 14px; font-weight: 700;
+    }
+    .section-icon {
+      flex-shrink: 0; width: 32px; height: 32px; border-radius: 8px;
+      background: var(--red-light); color: var(--red);
+      display: grid; place-items: center;
+    }
+    .section-icon svg { width: 18px; height: 18px; }
+    .legal-content h2 { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+    .legal-content h3 { font-size: 16px; font-weight: 600; margin: 20px 0 10px; color: var(--ink-soft); }
+    .legal-content p { font-size: 15px; color: var(--ink-soft); margin-bottom: 14px; }
+    .legal-content ul, .legal-content ol { margin: 0 0 14px 20px; font-size: 15px; color: var(--ink-soft); }
+    .legal-content li { margin-bottom: 8px; }
+
+    /* Risk callout */
+    .callout {
+      background: var(--surface); border: 1px solid var(--border);
+      border-left: 4px solid var(--red); border-radius: var(--radius-card);
+      padding: 20px 24px; margin: 20px 0;
+    }
+    .callout h4 { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+    .callout p { font-size: 14px; font-style: italic; color: var(--ink-soft); margin: 0; line-height: 1.6; }
+
+    /* Print link */
+    .print-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-top: 32px; font-size: 14px; font-weight: 600; color: var(--red);
+      cursor: pointer; background: none; border: none; font-family: inherit;
+      transition: color 0.15s;
+    }
+    .print-link:hover { color: var(--red-dark); }
+    .print-link svg { width: 18px; height: 18px; }
+
+    /* Footer */
+    .footer { background: var(--surface); border-top: 1px solid var(--border); padding: 64px 0 32px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-brand p { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 28ch; margin-top: 12px; }
+    .footer-col h4 {
+      font-size: 13px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.06em; margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { font-size: 14px; color: var(--muted); transition: color 0.15s; }
+    .footer-col a:hover, .footer-col a.is-active { color: var(--red); }
+    .footer-bottom {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 24px; border-top: 1px solid var(--border);
+      font-size: 13px; color: var(--muted);
+    }
+    .status { display: flex; align-items: center; gap: 8px; }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; }
+    .social-links { display: flex; gap: 16px; }
+    .social-links a { color: var(--muted); transition: color 0.15s; }
+    .social-links a:hover { color: var(--ink); }
+    .social-links svg { width: 20px; height: 20px; }
+
+    @media print {
+      .nav, .legal-sidebar, .footer, .print-link { display: none !important; }
+      .legal-grid { grid-template-columns: 1fr; }
+      .legal-body { padding: 0; }
+    }
+
+    @media (max-width: 900px) {
+      .legal-grid { grid-template-columns: 1fr; gap: 32px; }
+      .legal-sidebar { position: static; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 820px) {
+      .nav-links {
+        display: none; position: absolute; top: var(--nav-h); left: 0; right: 0;
+        flex-direction: column; gap: 0; background: var(--paper);
+        border-bottom: 1px solid var(--border); padding: 16px 24px 24px; box-shadow: var(--shadow-md);
+      }
+      .nav-links.is-open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a { display: block; padding: 12px 0; font-size: 16px; }
+      .nav-toggle { display: flex; }
+      .nav-actions .btn-nav-download { display: none; }
+      .nav { position: relative; }
+    }
+    @media (max-width: 600px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">AwaraBuddy</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#community">Community</a></li>
+        <li><a href="index.html#support">Support</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="index.html#download" class="btn btn-primary btn-nav-download">Download App</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="legal-hero">
+    <div class="container">
+      <p class="eyebrow">Legal Documentation</p>
+      <h1>Terms and Conditions</h1>
+      <p class="subtitle">
+        Last Updated: July 3, 2026. These Terms govern your use of AwaraBuddy across our mobile apps,
+        website, social channels, and all brand touchpoints. Please read them carefully.
+      </p>
+    </div>
+  </header>
+
+  <main class="legal-body">
+    <div class="container">
+      <div class="legal-grid">
+        <aside class="legal-sidebar" aria-label="Table of contents">
+          <nav>
+            <ul class="toc" id="toc">
+              <li><a href="#introduction" class="is-active">1. Introduction</a></li>
+              <li><a href="#eligibility">2. Eligibility &amp; Responsibilities</a></li>
+              <li><a href="#rides">3. Rides &amp; Participants</a></li>
+              <li><a href="#safety">4. Safety Disclaimer</a></li>
+              <li><a href="#expenses">5. Expense Handling</a></li>
+              <li><a href="#payments">6. Payments</a></li>
+              <li><a href="#liability">7. Liability</a></li>
+              <li><a href="#termination">8. Account Termination</a></li>
+              <li><a href="#governing-law">9. Governing Law</a></li>
+              <li><a href="#contact">10. Contact</a></li>
+            </ul>
+          </nav>
+        </aside>
+
+        <article class="legal-content">
+          <section id="introduction">
+            <div class="section-header">
+              <span class="section-num">1</span>
+              <h2>Introduction</h2>
+            </div>
+            <p>
+              These Terms and Conditions ("Terms") are a binding agreement between you ("you," "User," or "your")
+              and <strong>[LEGAL ENTITY NAME]</strong> ("AwaraBuddy," "we," "us," or "our").
+            </p>
+            <p>
+              These Terms apply when you access or use any AwaraBuddy brand property, including our mobile
+              applications (Android and iOS), website at <a href="https://awarabuddy.com">awarabuddy.com</a>,
+              waitlist and pilot forms, social media accounts, newsletters, and customer support (collectively,
+              the "Services").
+            </p>
+            <p>
+              By using the Services, creating an account, joining a waitlist, or checking "I agree" in the app,
+              you confirm that you have read and agree to these Terms and our
+              <a href="privacy.html">Privacy Policy</a>. If you do not agree, do not use the Services.
+            </p>
+          </section>
+
+          <section id="eligibility">
+            <div class="section-header">
+              <span class="section-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                </svg>
+              </span>
+              <h2>Eligibility &amp; User Responsibilities</h2>
+            </div>
+            <p>You may use the Services only if you are at least <strong>18 years old</strong> (or the age of majority in your jurisdiction) and have the legal capacity to enter a binding contract.</p>
+            <h3>What AwaraBuddy is</h3>
+            <p>AwaraBuddy is a <strong>group-riding coordination tool</strong> that helps riders create and discover group rides, see who has joined, track shared expenses, manage profiles, and receive ride notifications.</p>
+            <h3>What AwaraBuddy is not</h3>
+            <p>AwaraBuddy is not a transportation, taxi, ride-hailing, or delivery service; not a travel agency; not an emergency response service; and not an insurer or payment escrow provider (except where explicitly stated for a specific paid feature). We do not employ ride hosts or control how rides are conducted on the road.</p>
+            <h3>Your account</h3>
+            <p>You may sign in using Google Sign-In or use limited features without signing in. You are responsible for maintaining the security of your credentials and all activity under your account. You may not create multiple accounts to evade restrictions or misrepresent your identity.</p>
+            <h3>Prohibited conduct</h3>
+            <p>You agree not to: use the Services unlawfully; harass or threaten other users; post false ride or expense information; impersonate others; scrape or reverse-engineer the Services; upload malware; circumvent security controls; or collect other users' personal information without consent.</p>
+          </section>
+
+          <section id="rides">
+            <div class="section-header">
+              <span class="section-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </span>
+              <h2>Rides &amp; Participants</h2>
+            </div>
+            <h3>Roles</h3>
+            <ul>
+              <li><strong>Captain (host):</strong> The user who creates and manages a ride.</li>
+              <li><strong>Participant:</strong> A user who joins a ride.</li>
+            </ul>
+            <h3>Captain responsibilities</h3>
+            <p>If you host a ride, you are solely responsible for planning, leading, and conducting it. You must provide accurate ride details, communicate changes in good faith, and comply with all applicable traffic, licensing, insurance, and safety laws. AwaraBuddy does not verify your riding skill, vehicle condition, insurance, or license.</p>
+            <h3>Participant responsibilities</h3>
+            <p>If you join a ride, you voluntarily accept the risks of group riding. You are responsible for your own vehicle, gear, fitness, and legal compliance. You may leave a ride before it starts, subject to in-app rules.</p>
+            <h3>Ride lifecycle</h3>
+            <p>Rides may be upcoming, live, completed, expired, or cancelled. Captains have exclusive rights to start, end, or cancel rides they host. Automated rules (e.g. expiry if a ride is not started on time) may apply. We do not guarantee that any ride will occur or that participants will attend.</p>
+          </section>
+
+          <section id="safety">
+            <div class="section-header">
+              <span class="section-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                  <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+              </span>
+              <h2>Safety Disclaimer</h2>
+            </div>
+            <div class="callout">
+              <h4>Mandatory Recognition of Risk</h4>
+              <p>
+                Motorcycle and group riding involve inherent risks, including serious injury or death.
+                You assume all risks associated with participating in or hosting rides arranged through
+                the Services. AwaraBuddy is not responsible for accidents, injuries, property damage,
+                or losses arising from rides. Location sharing, emergency contacts, and ride tracking are
+                supplementary tools only and do not replace emergency services. In an emergency, contact
+                local authorities immediately (e.g. 112 in India).
+              </p>
+            </div>
+            <p>
+              Emergency contacts you store in your profile are optional and not automatically shared
+              with all users. You represent that you have permission to provide those contacts' details.
+              AwaraBuddy is not responsible for failures to notify emergency contacts due to network
+              issues, device settings, or third-party outages.
+            </p>
+          </section>
+
+          <section id="expenses">
+            <div class="section-header">
+              <span class="section-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+              </span>
+              <h2>Expense Handling</h2>
+            </div>
+            <p>
+              The Services allow users to record shared expenses (fuel, food, tolls, etc.) and view
+              summaries or splits. Expense entries are <strong>user-generated</strong> and for
+              coordination purposes only.
+            </p>
+            <p>
+              We do not guarantee the accuracy of expense records. Disputes over amounts owed are
+              between users. Unless explicitly stated otherwise, AwaraBuddy is not a party to private
+              payment arrangements between riders.
+            </p>
+          </section>
+
+          <section id="payments">
+            <div class="section-header">
+              <span class="section-num">6</span>
+              <h2>Payments</h2>
+            </div>
+            <p>
+              During pilot or early phases, payment-related features may be disabled, limited to
+              ledger-only tracking, or available only to approved pilot Captains.
+            </p>
+            <p>Where paid join fees or in-app payments are enabled:</p>
+            <ul>
+              <li>Additional payment terms may apply and will be shown at checkout.</li>
+              <li>Payments may be processed by third-party payment providers.</li>
+              <li>Refunds and disputes may be subject to provider rules and our stated refund policy.</li>
+              <li>We may block payment features for users who violate policies (e.g. repeated no-shows).</li>
+            </ul>
+            <p>You are responsible for any taxes arising from payments you make or receive in connection with rides.</p>
+          </section>
+
+          <section id="liability">
+            <div class="section-header">
+              <span class="section-num">7</span>
+              <h2>Liability</h2>
+            </div>
+            <h3>Disclaimers</h3>
+            <p>
+              TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE"
+              WITHOUT WARRANTIES OF ANY KIND. WE DO NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED,
+              ERROR-FREE, OR SECURE, OR THAT ANY RIDE WILL BE SAFE OR SUCCESSFUL.
+            </p>
+            <h3>Limitation of liability</h3>
+            <p>
+              TO THE MAXIMUM EXTENT PERMITTED BY LAW, [LEGAL ENTITY NAME] AND ITS OFFICERS, DIRECTORS,
+              EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+              CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF THE SERVICES, ANY RIDE,
+              ACCIDENT, INJURY, OR PROPERTY DAMAGE, OR CONDUCT OF ANY USER OR THIRD PARTY.
+            </p>
+            <p>
+              OUR TOTAL LIABILITY FOR ANY CLAIM SHALL NOT EXCEED THE GREATER OF INR 1,000 (OR
+              equivalent) OR THE AMOUNT YOU PAID TO AWARABUDDY IN THE 12 MONTHS BEFORE THE CLAIM.
+            </p>
+            <h3>Indemnification</h3>
+            <p>
+              You agree to indemnify and hold harmless [LEGAL ENTITY NAME] from any claims arising from
+              your use of the Services, your User Content, your organization or participation in rides,
+              or your violation of these Terms or applicable law.
+            </p>
+            <h3>Intellectual property</h3>
+            <p>
+              The Services, including the AwaraBuddy name, logo, design, and software, are owned by us
+              or our licensors. You receive a limited, non-transferable license for personal,
+              non-commercial use. You retain ownership of your User Content but grant us a license to
+              operate the Services as described in our Privacy Policy.
+            </p>
+            <h3>Beta and pilot features</h3>
+            <p>
+              AwaraBuddy may be offered in pilot or beta form. Features may be incomplete, change
+              without notice, or be removed. You use pilot features at your own risk.
+            </p>
+          </section>
+
+          <section id="termination">
+            <div class="section-header">
+              <span class="section-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
+                </svg>
+              </span>
+              <h2>Account Termination</h2>
+            </div>
+            <p>
+              We may suspend or terminate your access if we reasonably believe you have violated these
+              Terms, misused the Services, engaged in fraud or illegal activity, or posed a safety risk.
+            </p>
+            <p>
+              You may stop using the Services at any time by logging out and uninstalling the app.
+              Some data may be retained as described in our Privacy Policy. Third-party services
+              (Google Sign-In, Firebase, Google Places, payment processors) are subject to their own terms.
+            </p>
+          </section>
+
+          <section id="governing-law">
+            <div class="section-header">
+              <span class="section-num">9</span>
+              <h2>Governing Law &amp; Changes</h2>
+            </div>
+            <p>
+              These Terms are governed by the laws of <strong>India</strong>, without regard to
+              conflict-of-law principles. Courts in <strong>[City, State, India]</strong> shall have
+              exclusive jurisdiction, subject to mandatory local consumer protection laws.
+            </p>
+            <p>
+              Before filing a claim, you agree to contact us at
+              <a href="mailto:legal@awarabuddy.com">legal@awarabuddy.com</a> and attempt informal
+              resolution for at least 30 days.
+            </p>
+            <p>
+              We may modify the Services or these Terms at any time. We will post updated Terms on
+              <a href="terms.html">awarabuddy.com/terms</a> and update the "Last Updated" date. For
+              material changes, we may notify you via the app, website, or email. Continued use
+              constitutes acceptance.
+            </p>
+          </section>
+
+          <section id="contact">
+            <div class="section-header">
+              <span class="section-num">10</span>
+              <h2>Contact</h2>
+            </div>
+            <p>
+              <strong>AwaraBuddy / [LEGAL ENTITY NAME]</strong><br />
+              Email: <a href="mailto:legal@awarabuddy.com">legal@awarabuddy.com</a><br />
+              Support: <a href="mailto:support@awarabuddy.com">support@awarabuddy.com</a><br />
+              Website: <a href="https://awarabuddy.com">awarabuddy.com</a>
+            </p>
+          </section>
+
+          <button class="print-link" onclick="window.print()" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+              <rect x="6" y="14" width="12" height="8"/>
+            </svg>
+            Print this document
+          </button>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">AwaraBuddy</a>
+          <p>The ultimate companion for group adventures, car convoys, and motorcycle clubs.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#support">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="index.html#support">FAQ</a></li>
+            <li><a href="index.html#community">Community</a></li>
+            <li><a href="index.html#support">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html" class="is-active">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 AwaraBuddy. All rights reserved.</span>
+        <div class="status" aria-label="System status">
+          <span class="status-dot"></span>
+          System Operational
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.getElementById("nav-toggle");
+      var navLinks = document.getElementById("nav-links");
+      toggle.addEventListener("click", function () {
+        var expanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!expanded));
+        navLinks.classList.toggle("is-open");
+      });
+
+      var tocLinks = document.querySelectorAll("#toc a");
+      var sections = [];
+      tocLinks.forEach(function (link) {
+        var id = link.getAttribute("href").slice(1);
+        var el = document.getElementById(id);
+        if (el) sections.push({ link: link, el: el });
+      });
+
+      function updateToc() {
+        var scrollY = window.scrollY + 120;
+        var current = sections[0];
+        sections.forEach(function (s) {
+          if (s.el.offsetTop <= scrollY) current = s;
+        });
+        tocLinks.forEach(function (l) { l.classList.remove("is-active"); });
+        if (current) current.link.classList.add("is-active");
+      }
+      window.addEventListener("scroll", updateToc, { passive: true });
+      updateToc();
+    })();
+  </script>
+</body>
+</html>
