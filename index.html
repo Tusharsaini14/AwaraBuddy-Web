@@ -261,6 +261,14 @@
       justify-content: center;
     }
 
+    .support-ctas {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+    }
+
     .phones {
       position: relative;
       margin-top: 56px;
@@ -868,12 +876,14 @@
         text-align: center;
       }
 
-      .hero-ctas {
+      .hero-ctas,
+      .support-ctas {
         flex-direction: column;
         align-items: stretch;
       }
 
-      .hero-ctas .btn {
+      .hero-ctas .btn,
+      .support-ctas .btn {
         width: 100%;
       }
     }
@@ -892,7 +902,12 @@
       </ul>
 
       <div class="nav-actions">
-        <a href="#download" class="btn btn-primary btn-nav-download">Download App</a>
+        <a href="https://play.google.com/store/apps/details?id=com.startupspeaks.awarabuddy" target="_blank" rel="noopener noreferrer" class="store-btn btn-primary btn-nav-download">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85a.637.637 0 0 0-.83.22l-1.88 3.24a11.463 11.463 0 0 0-8.94 0L5.65 5.67a.643.643 0 0 0-.87-.2c-.32.15-.44.54-.28.85l1.84 3.18C2.92 11.03 1 14.22 1 17.77h22c0-3.55-1.92-6.74-5.4-8.29zM7 20.77c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z"/>
+          </svg>
+          Download for Android
+        </a>
         <button
           class="nav-toggle"
           id="nav-toggle"
@@ -1058,7 +1073,7 @@
     </div>
   </section>
 
-  <!-- Stats -->
+  <!-- Stats
   <section class="stats" aria-label="Platform statistics">
     <div class="container">
       <div class="stats-grid">
@@ -1081,6 +1096,7 @@
       </div>
     </div>
   </section>
+  -->
 
   <!-- Community anchor section -->
   <section class="community" id="community">
@@ -1090,6 +1106,14 @@
         Connect with captains, share routes, and ride with groups that match your
         pace — city by city, cafe by cafe.
       </p>
+      <div style="margin-top: 24px;">
+        <a href="https://www.instagram.com/awarabuddy/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="margin-right: 8px; vertical-align: middle; display: inline-block;">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.85-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+          </svg>
+          Follow us on Instagram for latest updates
+        </a>
+      </div>
     </div>
   </section>
 
@@ -1102,13 +1126,7 @@
         community today.
       </p>
       <div class="cta-buttons">
-        <a href="#" class="store-btn btn-white">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-          </svg>
-          Download for iOS
-        </a>
-        <a href="#" class="store-btn btn-dark">
+        <a href="https://play.google.com/store/apps/details?id=com.startupspeaks.awarabuddy" target="_blank" rel="noopener noreferrer" class="store-btn btn-dark">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85a.637.637 0 0 0-.83.22l-1.88 3.24a11.463 11.463 0 0 0-8.94 0L5.65 5.67a.643.643 0 0 0-.87-.2c-.32.15-.44.54-.28.85l1.84 3.18C2.92 11.03 1 14.22 1 17.77h22c0-3.55-1.92-6.74-5.4-8.29zM7 20.77c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z"/>
           </svg>
@@ -1126,7 +1144,21 @@
         Browse our FAQ, reach out to the community, or contact us directly — we're
         here for every kilometer of your journey.
       </p>
-      <a href="#" class="btn btn-outline">Contact Support</a>
+      <div class="support-ctas">
+        <a href="https://wa.me/916284541120" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="margin-right: 6px; vertical-align: middle;">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.66.986 3.292 1.503 4.908 1.504 5.514 0 10.007-4.48 10.01-9.997.001-2.672-1.039-5.185-2.927-7.078-1.888-1.891-4.398-2.932-7.072-2.933-5.522 0-10.014 4.481-10.017 9.997-.002 1.83.487 3.62 1.418 5.206L.938 21.09l5.709-1.936zm11.233-7.55c-.3-.15-1.771-.875-2.04-.973-.27-.099-.467-.149-.662.15-.195.3-.755.973-.926 1.171-.171.199-.343.224-.643.075-.3-.15-1.267-.467-2.413-1.488-.891-.796-1.492-1.779-1.667-2.079-.175-.3-.019-.462.13-.611.135-.133.3-.349.45-.523.15-.174.2-.299.3-.499.1-.2.05-.375-.025-.524-.075-.15-.662-1.597-.907-2.185-.238-.574-.48-.496-.662-.505-.171-.007-.368-.009-.565-.009-.197 0-.517.074-.788.374-.27.3-1.03 1.007-1.03 2.455 0 1.449 1.052 2.846 1.199 3.045.148.199 2.07 3.161 5.013 4.437.701.304 1.248.485 1.67.621.705.224 1.346.193 1.854.117.566-.085 1.771-.724 2.021-1.424.25-.699.25-1.299.175-1.424-.075-.125-.27-.199-.57-.349z"/>
+          </svg>
+          Chat on WhatsApp
+        </a>
+        <a href="mailto:info@awarabuddy.com" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" style="margin-right: 6px; vertical-align: middle;">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          Email Us
+        </a>
+      </div>
     </div>
   </section>
 
@@ -1171,12 +1203,18 @@
       <div class="footer-bottom">
         <span>&copy; 2024 AwaraBuddy. All rights reserved.</span>
         <div class="social-links" aria-label="Social media">
-          <a href="#" aria-label="X (Twitter)">
+          <a href="https://wa.me/916284541120" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.66.986 3.292 1.503 4.908 1.504 5.514 0 10.007-4.48 10.01-9.997.001-2.672-1.039-5.185-2.927-7.078-1.888-1.891-4.398-2.932-7.072-2.933-5.522 0-10.014 4.481-10.017 9.997-.002 1.83.487 3.62 1.418 5.206L.938 21.09l5.709-1.936zm11.233-7.55c-.3-.15-1.771-.875-2.04-.973-.27-.099-.467-.149-.662.15-.195.3-.755.973-.926 1.171-.171.199-.343.224-.643.075-.3-.15-1.267-.467-2.413-1.488-.891-.796-1.492-1.779-1.667-2.079-.175-.3-.019-.462.13-.611.135-.133.3-.349.45-.523.15-.174.2-.299.3-.499.1-.2.05-.375-.025-.524-.075-.15-.662-1.597-.907-2.185-.238-.574-.48-.496-.662-.505-.171-.007-.368-.009-.565-.009-.197 0-.517.074-.788.374-.27.3-1.03 1.007-1.03 2.455 0 1.449 1.052 2.846 1.199 3.045.148.199 2.07 3.161 5.013 4.437.701.304 1.248.485 1.67.621.705.224 1.346.193 1.854.117.566-.085 1.771-.724 2.021-1.424.25-.699.25-1.299.175-1.424-.075-.125-.27-.199-.57-.349z"/>
             </svg>
           </a>
-          <a href="#" aria-label="Instagram">
+          <a href="mailto:info@awarabuddy.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; vertical-align: middle;">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/awarabuddy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.85-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
             </svg>
