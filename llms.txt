@@ -1,0 +1,26 @@
+# AwaraBuddy — Group Ride Companion
+
+AwaraBuddy is an all-in-one companion application for group rides and convoys, designed to help squad members plan, track, and manage their trips seamlessly.
+
+## Core Features
+
+- **Real-time Squad Sync**: High-precision, low-bandwidth location sharing. Keep track of all riders in the squad without draining the mobile battery or requiring high cellular bandwidth.
+- **Fuel & Food Splitter**: Easy, single-tap expense logging with automated per-rider calculations. Calculates balances and simplifies settlements at the end of the trip.
+- **Curated Routes**: Verified community routes with information on scenic stops, fuel stations, road conditions, and direct GPX file export to external navigation apps.
+- **Squad SOS**: Instant emergency alert system to notify all squad members about breakdowns, accidents, or delays, keeping emergency contacts a single tap away.
+
+## Platform Support
+
+- **Android App**: Available on Google Play Store ([Download for Android](https://play.google.com/store/apps/details?id=com.startupspeaks.awarabuddy)).
+- **iOS App**: Coming soon.
+
+## Contact & Support
+
+- **Email**: info@awarabuddy.com
+- **WhatsApp Support**: Chat on WhatsApp ([+91 62845 41120](https://wa.me/916284541120))
+- **Social Media**: Follow us on Instagram ([@awarabuddy](https://www.instagram.com/awarabuddy/))
+
+## Legal Documents
+
+- [Privacy Policy](https://awarabuddy.com/privacy.html): Understand how user data is collected and protected.
+- [Terms of Service](https://awarabuddy.com/terms.html): Rules and policies governing the use of the AwaraBuddy app and platform.

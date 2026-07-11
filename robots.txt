@@ -1,0 +1,56 @@
+# User-Agent configuration for AwaraBuddy
+
+# 1. Standard Search Engine Bots (Allow full indexing)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# 2. AI Search & Retrieval Bots (Allow to ensure citation and discovery in AI Chat tools)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# 3. AI Model Training Crawlers (Block to protect copyright and prevent model training)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Cohere-ai
+Disallow: /
+
+# 4. Default rules for all other crawlers
+User-agent: *
+Allow: /
+
+# Link to sitemap
+Sitemap: https://awarabuddy.com/sitemap.xml
