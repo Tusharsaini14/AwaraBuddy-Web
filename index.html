@@ -1,23 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q93HFEZ8GX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Q93HFEZ8GX');
-</script>
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AwaraBuddy — Your All-in-One Group Ride Companion</title>
+  <title>AwaraBuddy (Awara Buddy) — Your All-in-One Group Ride Companion</title>
   <meta
     name="description"
-    content="Plan, track, and split expenses seamlessly. Whether it's a weekend bike trip or a cross-country convoy, AwaraBuddy keeps your squad synchronized."
+    content="The ultimate ride planning app for the riding community. Plan, track, and split expenses seamlessly for group rides, solo rides, short weekend trips, or long-distance convoys with AwaraBuddy (Awara Buddy)."
   />
+  <meta
+    name="keywords"
+    content="riding community, group ride, solo ride, short rides, long rides, ride planning, motorcycle trip planner, squad ride tracker, road trips, convoy planning"
+  />
+  <link rel="canonical" href="https://awarabuddy.com/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://awarabuddy.com/" />
+  <meta property="og:title" content="AwaraBuddy (Awara Buddy) — Your All-in-One Group Ride Companion" />
+  <meta property="og:description" content="The ultimate ride planning app for the riding community. Plan, track, and split expenses seamlessly for group rides, solo rides, short weekend trips, or long-distance convoys with AwaraBuddy (Awara Buddy)." />
+  <meta property="og:image" content="https://awarabuddy.com/og-image.png" />
+  <meta property="og:site_name" content="AwaraBuddy (Awara Buddy)" />
+
+  <!-- Structured Data (JSON-LD) for Search Engines & AI Agents -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AwaraBuddy",
+    "alternativeName": "Awara Buddy",
+    "operatingSystem": "Android",
+    "applicationCategory": "TravelApplication",
+    "description": "The ultimate ride planning app for the riding community. Plan, track, and split expenses seamlessly for group rides, solo rides, short weekend trips, or long-distance convoys with AwaraBuddy (Awara Buddy).",
+    "keywords": "riding community, group ride, solo ride, short rides, long rides, ride planning, motorcycle trip planner, squad ride tracker, road trips, convoy planning",
+    "url": "https://play.google.com/store/apps/details?id=com.startupspeaks.awarabuddy",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.startupspeaks.awarabuddy",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
+    },
+    "sameAs": [
+      "https://www.instagram.com/awarabuddy/",
+      "https://www.youtube.com/channel/UCvRIoKbKax2RPSMacI17Uiw",
+      "https://www.facebook.com/share/1EfQFGcMrr/",
+      "https://www.reddit.com/user/AwaraBuddy/"
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -897,6 +927,128 @@
         width: 100%;
       }
     }
+
+    /* ---------- Download Dialog/Modal ---------- */
+    .download-modal {
+      border: none;
+      background: transparent;
+      padding: 0;
+      max-width: 400px;
+      width: 90%;
+      border-radius: 24px;
+      box-shadow: var(--shadow-lg);
+      overflow: visible;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+    }
+
+    .download-modal::backdrop {
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .download-modal[open]::backdrop {
+      opacity: 1;
+    }
+
+    .modal-card {
+      background: var(--paper);
+      padding: 32px;
+      border-radius: 24px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: var(--surface);
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 20px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink-soft);
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .modal-close:hover {
+      background: var(--surface-alt);
+      color: var(--ink);
+    }
+
+    .download-modal h3 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .modal-sub {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 24px;
+      max-width: 32ch;
+    }
+
+    .qr-container {
+      background: #fdfdfd;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .qr-image {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .modal-divider {
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      line-height: 0.1em;
+      margin: 10px 0 20px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .modal-divider span {
+      background: var(--paper);
+      padding: 0 10px;
+    }
+
+    .direct-download-btn {
+      width: 100%;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -936,10 +1088,11 @@
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h1>Your All-in-One Group Ride Companion.</h1>
+      <h1>Your All-in-One Ride Planning & Group Companion</h1>
       <p class="hero-sub">
-        Plan, track, and split expenses seamlessly. Whether it's a weekend bike trip
-        or a cross-country convoy, AwaraBuddy keeps your squad synchronized.
+        The ultimate utility for the riding community. Seamlessly plan and manage group rides,
+        solo rides, short weekend getaways, or long-distance road trips.
+        AwaraBuddy (Awara Buddy) keeps your squad synchronized.
       </p>
       <div class="hero-ctas">
         <a href="#download" class="btn btn-primary btn-lg">Start Your Journey</a>
@@ -1015,10 +1168,9 @@
   <section class="features" id="features">
     <div class="container">
       <div class="features-header">
-        <h2>Precision Built for the Road.</h2>
+        <h2>Ride Planning &amp; Tracking Utility</h2>
         <p>
-          No clutter, just utility. We've stripped back the noise to give you the
-          essential tools for every kilometer.
+          Precision built for every kind of trip. Whether you're coordinating a group ride, hitting the road for a solo ride, planning short weekend getaways, or prepping for long rides cross-country.
         </p>
       </div>
 
@@ -1058,10 +1210,9 @@
               <circle cx="12" cy="10" r="3"/>
             </svg>
           </div>
-          <h3>Curated Routes</h3>
+          <h3>Curated Routes &amp; Planning</h3>
           <p>
-            Community-verified routes with scenic stops, fuel stations, and GPX
-            export for your navigation app of choice.
+            Explore community-verified route guides with scenic stops and fuel stations. Perfect for solo ride planning or group ride navigation with direct GPX exports.
           </p>
         </article>
 
@@ -1111,17 +1262,34 @@
   <!-- Community anchor section -->
   <section class="community" id="community">
     <div class="container">
-      <h2>Join the Riding Community</h2>
+      <h2>Join the Active Riding Community</h2>
       <p>
-        Connect with captains, share routes, and ride with groups that match your
-        pace — city by city, cafe by cafe.
+        Connect with captains, plan solo ride routes, join group rides, and coordinate short rides or long rides with squads that match your pace.
       </p>
-      <div style="margin-top: 24px;">
+      <div style="margin-top: 24px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
         <a href="https://www.instagram.com/awarabuddy/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
           <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="margin-right: 8px; vertical-align: middle; display: inline-block;">
             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.85-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
           </svg>
-          Follow us on Instagram for latest updates
+          Instagram
+        </a>
+        <a href="https://www.facebook.com/share/1EfQFGcMrr/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="margin-right: 8px; vertical-align: middle; display: inline-block;">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          Facebook
+        </a>
+        <a href="https://www.youtube.com/channel/UCvRIoKbKax2RPSMacI17Uiw" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="margin-right: 8px; vertical-align: middle; display: inline-block;">
+            <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.5 12 3.5 12 3.5s-7.517 0-9.388.553a3.002 3.002 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.002 3.002 0 0 0 2.11 2.11C4.483 20.5 12 20.5 12 20.5s7.518 0 9.388-.553a3.002 3.002 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          YouTube
+        </a>
+        <a href="https://www.reddit.com/user/AwaraBuddy/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="margin-right: 8px; vertical-align: middle; display: inline-block;">
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-1.077 3.23a.5.5 0 0 0 .633.633l3.23-1.077A11.942 11.942 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm5.01 14.18c.03-.1.043-.205.043-.31 0-1.082-.876-1.96-1.96-1.96-.34 0-.66.088-.94.24-.954-.672-2.254-1.1-3.692-1.146l.78-2.45 2.148.455c.046.745.666 1.335 1.42 1.335.783 0 1.42-.637 1.42-1.42 0-.783-.637-1.42-1.42-1.42-.647 0-1.196.434-1.363 1.026l-2.383-.506a.5.5 0 0 0-.583.336l-.916 2.88c-1.494.02-2.846.452-3.834 1.144a1.957 1.957 0 0 0-.912-.228c-1.083 0-1.96.878-1.96 1.96 0 .473.17.905.45 1.242-.112.383-.173.782-.173 1.193 0 2.822 3.518 5.12 7.84 5.12 4.322 0 7.84-2.298 7.84-5.12 0-.41-.06-.81-.174-1.193.28-.337.45-.77.45-1.242zM8.32 13.68c.553 0 1 .447 1 1s-.447 1-1 1-1-.447-1-1 .447-1 1-1zm6.98 2.82c-.89.89-2.558.97-3.3 1.01a.345.345 0 0 1-.345-.345c0-.173.13-.318.3-.34 2.27-.227 2.76-1.242 2.78-1.28a.339.339 0 0 1 .47-.116c.15.093.2.29.1.44a4.137 4.137 0 0 1-.986.63zm.38-1.82a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+          </svg>
+          Reddit
         </a>
       </div>
     </div>
@@ -1229,10 +1397,41 @@
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.85-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
             </svg>
           </a>
+          <a href="https://www.facebook.com/share/1EfQFGcMrr/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width: 20px; height: 20px; vertical-align: middle;">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCvRIoKbKax2RPSMacI17Uiw" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width: 20px; height: 20px; vertical-align: middle;">
+              <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.5 12 3.5 12 3.5s-7.517 0-9.388.553a3.002 3.002 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.002 3.002 0 0 0 2.11 2.11C4.483 20.5 12 20.5 12 20.5s7.518 0 9.388-.553a3.002 3.002 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+          <a href="https://www.reddit.com/user/AwaraBuddy/" target="_blank" rel="noopener noreferrer" aria-label="Reddit">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width: 20px; height: 20px; vertical-align: middle;">
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-1.077 3.23a.5.5 0 0 0 .633.633l3.23-1.077A11.942 11.942 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm5.01 14.18c.03-.1.043-.205.043-.31 0-1.082-.876-1.96-1.96-1.96-.34 0-.66.088-.94.24-.954-.672-2.254-1.1-3.692-1.146l.78-2.45 2.148.455c.046.745.666 1.335 1.42 1.335.783 0 1.42-.637 1.42-1.42 0-.783-.637-1.42-1.42-1.42-.647 0-1.196.434-1.363 1.026l-2.383-.506a.5.5 0 0 0-.583.336l-.916 2.88c-1.494.02-2.846.452-3.834 1.144a1.957 1.957 0 0 0-.912-.228c-1.083 0-1.96.878-1.96 1.96 0 .473.17.905.45 1.242-.112.383-.173.782-.173 1.193 0 2.822 3.518 5.12 7.84 5.12 4.322 0 7.84-2.298 7.84-5.12 0-.41-.06-.81-.174-1.193.28-.337.45-.77.45-1.242zM8.32 13.68c.553 0 1 .447 1 1s-.447 1-1 1-1-.447-1-1 .447-1 1-1zm6.98 2.82c-.89.89-2.558.97-3.3 1.01a.345.345 0 0 1-.345-.345c0-.173.13-.318.3-.34 2.27-.227 2.76-1.242 2.78-1.28a.339.339 0 0 1 .47-.116c.15.093.2.29.1.44a4.137 4.137 0 0 1-.986.63zm.38-1.82a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- Download dialog modal -->
+  <dialog id="download-modal" class="download-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      <h3>Download AwaraBuddy</h3>
+      <p class="modal-sub">Scan the QR code with your phone's camera to install the app directly on your Android device.</p>
+      <div class="qr-container">
+        <img src="qr-code.png" onerror="this.onerror=null; this.src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data=https://play.google.com/store/apps/details?id=com.startupspeaks.awarabuddy';" alt="Scan to download AwaraBuddy on Google Play Store" class="qr-image" />
+      </div>
+      <div class="modal-divider"><span>OR</span></div>
+      <a href="https://play.google.com/store/apps/details?id=com.startupspeaks.awarabuddy" target="_blank" rel="noopener noreferrer" class="btn btn-primary direct-download-btn">
+        Open Google Play Store
+      </a>
+    </div>
+  </dialog>
 
   <script>
     (function () {
@@ -1263,6 +1462,50 @@
           }
         });
       });
+
+      // Download redirect/modal trigger logic
+      var modal = document.getElementById("download-modal");
+      var closeBtn = document.getElementById("modal-close-btn");
+
+      function isMobile() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      }
+
+      function handleDownloadClick(e) {
+        if (!isMobile()) {
+          // It's a desktop user, show the QR code modal
+          e.preventDefault();
+          modal.showModal();
+        }
+        // If it's a mobile user, let the default link behavior redirect them to the Play Store
+      }
+
+      // Bind play store links
+      document.querySelectorAll('a[href*="play.google.com"]').forEach(function (btn) {
+        // Exclude the link inside the modal itself so the user can click it to redirect
+        if (!btn.classList.contains("direct-download-btn")) {
+          btn.addEventListener("click", handleDownloadClick);
+        }
+      });
+
+      // Close modal on close button click
+      if (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+          modal.close();
+        });
+      }
+
+      // Close modal when clicking on the backdrop outside the card content
+      if (modal) {
+        modal.addEventListener("click", function (e) {
+          var rect = modal.getBoundingClientRect();
+          var isInDialog = (rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&
+            rect.left <= e.clientX && e.clientX <= rect.left + rect.width);
+          if (!isInDialog) {
+            modal.close();
+          }
+        });
+      }
     })();
   </script>
 </body>

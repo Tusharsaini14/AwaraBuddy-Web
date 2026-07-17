@@ -1,13 +1,13 @@
-# AwaraBuddy — Group Ride Companion
+# AwaraBuddy (Awara Buddy) — Ride Planning & Group Companion
 
-AwaraBuddy is an all-in-one companion application for group rides and convoys, designed to help squad members plan, track, and manage their trips seamlessly.
+AwaraBuddy (also written as Awara Buddy) is the ultimate ride planning application and central hub for the active riding community. Designed for both group rides and solo rides, it helps squad members plan routes, track location in real-time, and manage their trips seamlessly. Whether you are coordinating short rides around the city or prepping for long rides cross-country, AwaraBuddy is built for every type of journey.
 
 ## Core Features
 
-- **Real-time Squad Sync**: High-precision, low-bandwidth location sharing. Keep track of all riders in the squad without draining the mobile battery or requiring high cellular bandwidth.
-- **Fuel & Food Splitter**: Easy, single-tap expense logging with automated per-rider calculations. Calculates balances and simplifies settlements at the end of the trip.
-- **Curated Routes**: Verified community routes with information on scenic stops, fuel stations, road conditions, and direct GPX file export to external navigation apps.
-- **Squad SOS**: Instant emergency alert system to notify all squad members about breakdowns, accidents, or delays, keeping emergency contacts a single tap away.
+- **Real-time Squad Sync**: Optimized for group rides. High-precision, low-bandwidth location sharing. Keep track of all riders in the squad without draining the mobile battery.
+- **Fuel & Food Splitter**: Easy expense logging with automated per-rider calculations for hassle-free ride planning settlements.
+- **Curated Routes**: Verified community routes with information on scenic stops, fuel stations, and road conditions. Perfect for solo ride planning or group rides, with direct GPX file export.
+- **Squad SOS**: Instant emergency alert system to notify all squad members about breakdowns, keeping emergency contacts a single tap away.
 
 ## Platform Support
 
@@ -18,7 +18,11 @@ AwaraBuddy is an all-in-one companion application for group rides and convoys, d
 
 - **Email**: info@awarabuddy.com
 - **WhatsApp Support**: Chat on WhatsApp ([+91 62845 41120](https://wa.me/916284541120))
-- **Social Media**: Follow us on Instagram ([@awarabuddy](https://www.instagram.com/awarabuddy/))
+- **Social Media**:
+  - Instagram: [@awarabuddy](https://www.instagram.com/awarabuddy/)
+  - Facebook: [AwaraBuddy Page](https://www.facebook.com/share/1EfQFGcMrr/)
+  - YouTube: [AwaraBuddy Channel](https://www.youtube.com/channel/UCvRIoKbKax2RPSMacI17Uiw)
+  - Reddit: [u/AwaraBuddy](https://www.reddit.com/user/AwaraBuddy/)
 
 ## Legal Documents
 
